@@ -19,6 +19,4 @@ DATABASES = {
     "arvin_mongo": None
 }
 
-import mongoengine
 
-conn = mongoengine.connect("arvin_mongo")
