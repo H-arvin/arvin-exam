@@ -1,0 +1,24 @@
+<div style="width:100%;margin: 0 auto;height: 100%;overflow-y: auto;padding:10px 10%;">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-3 control-label" style="text-align: left">请选择业务：</label>
+            <div class="col-sm-9">
+                <select class="form-control" ng-options="i.bk_biz_id as i.bk_biz_name for i in biz_list"
+                        ng-model="host_filter.biz_id"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label" style="text-align: left">时间：</label>
+            <div class="col-sm-9">
+                <input class="form-control" ng-model="host_filter.time">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label" style="text-align: left"></label>
+            <div class="col-sm-7">
+                <button class="btn btn-sm btn-success" style="width:120px;" ng-click="search()">查询</button>
+            </div>
+        </div>
+    </div>
+    <div cw-adaptbody="220" ng-grid="gridOption" style="width:100%;overflow-y: hidden"></div>
+</div>
