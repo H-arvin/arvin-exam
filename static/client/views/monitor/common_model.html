@@ -1,0 +1,40 @@
+<div style="padding-left: 15px">
+    <input id="uploadInfo" multiple style="display: none" onchange="angular.element(this).scope().uploadItem()"
+           name="uploadInfo[]" type="file"/>
+    <br>
+    <div style="float:left;">
+        <button class="btn btn-primary btn-sm"
+                onclick="document.getElementById('uploadInfo').value = ''; document.getElementById('uploadInfo').click();">
+            文件上传
+        </button>
+    </div>
+    <br>
+    <br>
+    <div style="width:50%;margin-top: 10px;">
+        <div ng-grid="fileGrid" style="width:100%;overflow-y: auto;overflow-x: hidden;height: 225px;"></div>
+    </div>
+    <div style="width:100%;overflow-y: auto">
+        <span class="text-danger" style="line-height: 30px;font-size: 12px;">请注意：上传同名文件会覆盖！
+        </span>
+    </div>
+</div>
+<br>
+<br>
+<div style="float:left;">
+    <button class="btn btn-primary btn-sm"
+            onclick="document.getElementById('uploadInfo').value = ''; document.getElementById('uploadInfo').click();">
+        文件上传
+    </button>
+</div>
+<div class="form-group">
+    <label class="col-sm-3 control-label">logo：</label>
+    <div class="col-sm-7">
+        <div id="logo">
+            <img ng-src="{{ img_url }}?" alt="">
+        </div>
+        <div kendo-upload="uploadOption" class="demo" id="kendo_upload_demo1" style="width:300px;">
+            <input name="files" class="file_input" type="file">
+        </div>
+    </div>
+    <span class="text-danger mt5 fl"></span>
+</div>
