@@ -1,0 +1,14 @@
+<div style="width:100%;margin: 0 auto;height: 100%;overflow-y: auto;padding:10px 10%;">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-1 control-label" style="text-align: left">IP地址：</label>
+            <div class="col-sm-7">
+                <input  style="width:120px;" ng-model="host_filter.ip">
+            </div>
+            <div class="col-sm-2" style="float: right">
+                <button class="btn btn-sm btn-success" style="width:120px;" ng-click="search_host_test()">查询主机</button>
+            </div>
+        </div>
+    </div>
+    <div cw-adaptbody="220" ng-grid="gridOption" style="width:100%;overflow-y: hidden"></div>
+</div>
